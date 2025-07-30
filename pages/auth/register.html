@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione - Gestione CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .bg-auth {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.4;
+        }
+        .auth-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <img src="../../assets/img/sfondoauth.jpg" alt="sfondo registrazione" class="bg-auth">
+    <div class="auth-content">
+        <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+            <div class="card shadow" style="width: 100%; max-width: 600px;">
+                <div class="card-body p-4">
+                    <h3 class="card-title text-center mb-4">Registrazione</h3>
+                    <div id="message-container"></div>
+                    <form id="registerForm" action="../../api/auth/register.php" method="POST" data-no-ajax="true" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
+                                <div class="invalid-feedback">Per favore, inserisci il nome.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cognome" class="form-label">Cognome</label>
+                                <input type="text" class="form-control" id="cognome" name="cognome" required>
+                                <div class="invalid-feedback">Per favore, inserisci il cognome.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">Per favore, inserisci un'email valida.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                            <div class="invalid-feedback">Per favore, inserisci una password.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="profile_picture" class="form-label">Foto Profilo (opzionale)</label>
+                            <input class="form-control" type="file" id="profile_picture" name="profile_picture" accept="image/*">
+                            <div class="form-text">Puoi aggiungere una foto profilo in seguito.</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input class="form-check-input" type="checkbox" id="privacyCheck" name="privacyCheck" required>
+                            <label class="form-check-label" for="privacyCheck">
+                                Accetto la <a href="../legal/privacy.html" target="_blank">Privacy Policy</a> e i <a href="../legal/terms.html" target="_blank">Termini e Condizioni</a> *
+                            </label>
+                            <div class="invalid-feedback">Devi accettare privacy e termini per registrarti.</div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Registrati</button>
+                        </div>
+                        <hr>
+                        <p class="text-center">Hai già un account? <a href="login.html">Accedi ora</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../../assets/js/auth.js"></script>
+</body>
+</html>

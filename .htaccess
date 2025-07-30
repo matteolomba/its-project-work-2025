@@ -1,0 +1,8 @@
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
+<Files ".env.example">
+    Order allow,deny
+    Deny from all
+</Files>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - CV Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">CV Manager</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="../../index.html">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1>Cookie Policy</h1>
+        <p class="text-muted">Ultimo aggiornamento: 21 luglio 2025</p>
+
+        <h2>1. Cosa sono i Cookie</h2>
+        <p>I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo quando visiti un sito web. Ci aiutano a rendere il sito più facile da usare e a migliorare la tua esperienza.</p>
+
+        <h2>2. Tipi di Cookie Utilizzati</h2>
+        
+        <h3>2.1 Cookie Tecnici (Necessari)</h3>
+        <p>Questi cookie sono essenziali per il funzionamento del sito e non possono essere disabilitati:</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Finalità</th>
+                    <th>Durata</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PHPSESSID</td>
+                    <td>Gestione della sessione utente</td>
+                    <td>Sessione</td>
+                </tr>
+                <tr>
+                    <td>login_token</td>
+                    <td>Mantenimento dell'accesso</td>
+                    <td>30 giorni</td>
+                </tr>
+                <tr>
+                    <td>csrf_token</td>
+                    <td>Protezione da attacchi CSRF</td>
+                    <td>Sessione</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.2 Cookie di Preferenze</h3>
+        <p>Memorizzano le tue preferenze per migliorare l'esperienza:</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Finalità</th>
+                    <th>Durata</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>theme_preference</td>
+                    <td>Tema preferito (chiaro/scuro)</td>
+                    <td>1 anno</td>
+                </tr>
+                <tr>
+                    <td>language_preference</td>
+                    <td>Lingua preferita</td>
+                    <td>1 anno</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.3 Cookie di Sicurezza</h3>
+        <p>Utilizzati per proteggere il tuo account:</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Finalità</th>
+                    <th>Durata</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>security_hash</td>
+                    <td>Verifica integrità sessione</td>
+                    <td>Sessione</td>
+                </tr>
+                <tr>
+                    <td>login_attempts</td>
+                    <td>Controllo tentativi di accesso</td>
+                    <td>1 ora</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. Cookie di Terze Parti</h2>
+        <p>Non utilizziamo cookie di terze parti per finalità di profilazione o pubblicità. I servizi esterni utilizzati (es. Google Fonts, Bootstrap CDN) possono impostare cookie tecnici necessari al funzionamento, ma non raccolgono dati personali per scopi di marketing.</p>
+
+        <h2>4. Come Gestire i Cookie</h2>
+        
+        <h3>4.1 Impostazioni del Browser</h3>
+        <p>Puoi gestire i cookie tramite le impostazioni del tuo browser:</p>
+        <ul>
+            <li><strong>Chrome:</strong> Impostazioni > Privacy e sicurezza > Cookie e altri dati dei siti</li>
+            <li><strong>Firefox:</strong> Opzioni > Privacy e sicurezza > Cookie e dati dei siti web</li>
+            <li><strong>Safari:</strong> Preferenze > Privacy > Gestisci dati dei siti web</li>
+            <li><strong>Edge:</strong> Impostazioni > Privacy, ricerca e servizi > Cookie</li>
+        </ul>
+
+        <h3>4.2 Pannello di Controllo Cookie</h3>
+        <div class="alert alert-info">
+            <h5>Gestisci le tue preferenze</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" checked disabled id="technical">
+                <label class="form-check-label" for="technical">
+                    Cookie Tecnici (Necessari)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="preferences">
+                <label class="form-check-label" for="preferences">
+                    Cookie di Preferenze
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="analytics">
+                <label class="form-check-label" for="analytics">
+                    Cookie Analitici (Non utilizzati)
+                </label>
+            </div>
+            <button class="btn btn-primary mt-2" onclick="saveCookiePreferences()">Salva Preferenze</button>
+        </div>
+
+        <h2>5. Conseguenze della Disabilitazione</h2>
+        <p>Disabilitando i cookie potrebbero verificarsi i seguenti problemi:</p>
+        <ul>
+            <li>Impossibilità di mantenere la sessione di login</li>
+            <li>Perdita delle preferenze personalizzate</li>
+            <li>Funzionalità ridotte del sito</li>
+            <li>Necessità di reinserire dati ripetutamente</li>
+        </ul>
+
+        <h2>6. Aggiornamenti</h2>
+        <p>Questa policy può essere aggiornata. Ti consigliamo di controllarla periodicamente per eventuali modifiche.</p>
+
+        <h2>7. Contatti</h2>
+        <p>Per domande sui cookie, contattaci a: <strong>privacy@cvmanager.it</strong></p>
+    </div>
+
+    <script>
+        function saveCookiePreferences() {
+            const preferences = document.getElementById('preferences').checked;
+            const analytics = document.getElementById('analytics').checked;
+            
+            // Salva le preferenze nei cookie
+            document.cookie = `cookie_preferences=${preferences}; max-age=31536000; path=/`;
+            document.cookie = `cookie_analytics=${analytics}; max-age=31536000; path=/`;
+            
+            alert('Preferenze salvate!');
+        }
+
+        // Carica le preferenze esistenti
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === 'cookie_preferences') {
+                    document.getElementById('preferences').checked = value === 'true';
+                }
+                if (name === 'cookie_analytics') {
+                    document.getElementById('analytics').checked = value === 'true';
+                }
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
