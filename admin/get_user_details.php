@@ -89,7 +89,7 @@ try {
     if (!empty($user['profile_picture'])) {
         echo '<div class="modern-card p-3 text-center">';
         echo '<h6 class="text-primary"><i class="bi bi-image me-2"></i>Foto Profilo</h6>';
-        echo '<img src="../uploads/profile_pics/' . htmlspecialchars($user['profile_picture']) . '" alt="Foto Profilo" class="img-thumbnail rounded-circle" style="max-width: 120px; max-height: 120px;">';
+        echo '<img src="../api/users/profile_pic.php?user_id=' . $user['id'] . '" alt="Foto Profilo" class="img-thumbnail rounded-circle" style="max-width: 120px; max-height: 120px;">';
         echo '</div>';
     }
 

@@ -135,7 +135,7 @@ const handlePhotoUpload = async (event) => {
             // Aggiorna l'immagine del profilo
             const profileImage = document.getElementById('profile-image');
             if (profileImage) {
-                profileImage.innerHTML = `<img src="../uploads/profile_pics/${result.filename}" alt="Foto Profilo" class="rounded-circle" width="120" height="120" style="object-fit: cover;">`;
+                profileImage.innerHTML = `<img src="../api/users/profile_pic.php?user_id=${userId}" alt="Foto Profilo" class="rounded-circle" width="120" height="120" style="object-fit: cover;">`;
             }
             
             // Chiudi modal e mostra messaggio

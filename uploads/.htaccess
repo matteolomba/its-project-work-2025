@@ -1,0 +1,3 @@
+# Blocca l'accesso diretto a tutti i file
+Order allow,deny
+Deny from all

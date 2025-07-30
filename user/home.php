@@ -179,7 +179,7 @@ function formatDateRange($start, $end) {
                     <div class="card-body text-center">
                         <div class="profile-picture-container mb-3" data-bs-toggle="modal" data-bs-target="#photoModal">
                             <?php if (!empty($user['profile_picture'])): ?>
-                                <img id="profile-image" src="../uploads/profile_pics/<?= htmlspecialchars($user['profile_picture']) ?>" 
+                                <img id="profile-image" src="../api/users/profile_pic.php?user_id=<?= $user['id'] ?>" 
                                      alt="Foto Profilo" class="rounded-circle" width="120" height="120" style="object-fit: cover;">
                             <?php else: ?>
                                 <div id="profile-image" class="rounded-circle bg-secondary d-flex align-items-center justify-content-center" 
@@ -625,7 +625,7 @@ function formatDateRange($start, $end) {
                     <form id="profile-picture-form" action="../api/users/avatar.php" method="POST" enctype="multipart/form-data">
                         <div class="text-center mb-3">
                             <?php if (!empty($user['profile_picture'])): ?>
-                                <img src="../uploads/profile_pics/<?= htmlspecialchars($user['profile_picture']) ?>" 
+                                <img src="../api/users/profile_pic.php?user_id=<?= $user['id'] ?>" 
                                      alt="Foto Attuale" class="rounded-circle" width="100" height="100" style="object-fit: cover;">
                             <?php else: ?>
                                 <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mx-auto" 
